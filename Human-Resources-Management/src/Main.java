@@ -842,8 +842,6 @@ public class Main {
     // ---------------- 10. SHBIS Adjustment ----------------
     private static void handleSHBISAdjustment() {
         System.out.println("\n--- 10. SHBIS Adjustment ---"); //SHBIS -> Staff House Building Investment Scheme
-        // 1 = SHBIS লোনধারীদের তালিকা দেখা
-        // 2 = মাসিক কিস্তির পরিমাণ পরিবর্তন করা
         System.out.println("1. View SHBIS Investment Holders (Loan Information)y");
         System.out.println("2. Adjust Monthly Recovery");
         System.out.println("98. Home | 99. Exit");
@@ -852,7 +850,7 @@ public class Main {
         in.nextLine(); // Buffer clear
 
         if (sub == 1) {
-            System.out.println("\n--- 🏠 SHBIS Active Investment Holders List ---");
+            System.out.println("\n--- SHBIS Active Investment Holders List ---");
             boolean found = false;
             for (Employee emp : db.getAllEmployees()) {
                 if (emp instanceof PermanentEmployee) {
@@ -922,7 +920,7 @@ public class Main {
             if (emp == null) {
                 System.out.println("Error: Employee ID not found in Daffodil Smart City Sub-Branch!");
             } else if (sub == 1) {
-                System.out.println("\n--- 🧾 Final Settlement Clearance Card ---");
+                System.out.println("\n--- Final Settlement Clearance Card ---");
                 double pfBalance = (emp.getBasicSalary() * 0.10) * 24 * 2;
                 double gratuity = emp.getBasicSalary() * 1.5;
                 double totalSettlement = pfBalance + gratuity + emp.getBasicSalary();
@@ -936,7 +934,7 @@ public class Main {
                 System.out.println("Status: Clearance Certificate Generated.");
 
             } else if (sub == 2) {
-                System.out.println("\n--- Encashment of Earned Leave (অর্জিত ছুটি নগদায়ন) ---");
+                System.out.println("\n--- Encashment of Earned Leave ---");
                 int earnedLeaveDays = 20;
                 double perDaySalary = emp.getBasicSalary() / 30;
                 double encashmentAmount = perDaySalary * earnedLeaveDays;

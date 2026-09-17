@@ -51,7 +51,6 @@ public class Employee { // Employee-er basic, personal ebong financial informati
         this.quardStatus = "No active approved Quard found."; // Initially kono approved Quard nei
     }
 
-    // গেটার এবং সেটার মেথডসমূহ
     public int getId() { return id; }
     public String getName() { return name; }
     public String getDesignation() { return designation; }
