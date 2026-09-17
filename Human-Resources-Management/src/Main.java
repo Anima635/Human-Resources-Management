@@ -540,7 +540,7 @@ public class Main {
                 System.out.print("Reason for Leave: ");
                 String reason = in.nextLine();
 
-                System.out.println("\n✔ Leave Application Submitted Successfully for " + emp.getName());
+                System.out.println("\n Leave Application Submitted Successfully for " + emp.getName());
                 System.out.println("Status: Pending Manager's Approval.");
             } else {
                 System.out.println(" Error: Employee ID not found in Daffodil Smart City Sub-Branch!");
@@ -580,7 +580,7 @@ public class Main {
                 String decision = in.nextLine();
 
                 if ("yes".equalsIgnoreCase(decision)) {
-                    System.out.println("✔ Application APPROVED. Notification sent to employee.");
+                    System.out.println("Application APPROVED. Notification sent to employee.");
                 } else {
                     System.out.println("Application REJECTED/HELD.");
                 }
@@ -750,7 +750,7 @@ public class Main {
         int id = getIntInput("Enter Employee ID: ");
         Employee emp = db.searchEmployee(id);
 
-        if (emp != null) {// Employee পাওয়া গেলে
+        if (emp != null) {// Employee found
             double maxAllowed = emp.getAccumulatedPF() * 0.80;
             System.out.println("Employee Name         : " + emp.getName());
             System.out.println("Accumulated PF Amount : " + emp.getAccumulatedPF() + " BDT");
@@ -951,7 +951,7 @@ public class Main {
                 String confirm = in.nextLine();
                 if (confirm.equalsIgnoreCase("yes")) {
                     db.removeEmployee(empId);
-                    System.out.println("✔ Success: Employee ID " + empId + " has been officially discharged from Daffodil Smart City Sub-Branch.");
+                    System.out.println("Success: Employee ID " + empId + " has been officially discharged from Daffodil Smart City Sub-Branch.");
                 } else {
                     System.out.println("Discharge process cancelled.");
                 }
